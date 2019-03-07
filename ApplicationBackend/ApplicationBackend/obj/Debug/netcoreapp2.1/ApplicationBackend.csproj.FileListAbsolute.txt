@@ -1,0 +1,14 @@
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\bin\Debug\netcoreapp2.1\ApplicationBackend.deps.json
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\bin\Debug\netcoreapp2.1\ApplicationBackend.runtimeconfig.json
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\bin\Debug\netcoreapp2.1\ApplicationBackend.runtimeconfig.dev.json
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\bin\Debug\netcoreapp2.1\ApplicationBackend.dll
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.csprojAssemblyReference.cache
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.csproj.CoreCompileInputs.cache
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.RazorAssemblyInfo.cache
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.RazorAssemblyInfo.cs
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.AssemblyInfoInputs.cache
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.AssemblyInfo.cs
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.RazorTargetAssemblyInfo.cache
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\bin\Debug\netcoreapp2.1\ApplicationBackend.pdb
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.dll
+C:\Users\x00126748\Downloads\CA2-master\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.pdb

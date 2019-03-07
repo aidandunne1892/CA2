@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.EntityFrameworkCore;
+using ApplicationBackend.Models;
 
 namespace ApplicationBackend
 {
@@ -26,6 +29,20 @@ namespace ApplicationBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Club API", Version = "v1" });
+            });
+
+
+            // register Stock2Context as a service (for DI into controllers)
+            services.AddDbContext<ClubContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ClubContext")));
+
+            // cf connection string in appsettings.json
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,8 +54,18 @@ namespace ApplicationBackend
             }
             else
             {
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Club API V1");
+            });
 
             app.UseHttpsRedirection();
             app.UseMvc();

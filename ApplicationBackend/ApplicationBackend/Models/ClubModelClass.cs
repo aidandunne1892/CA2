@@ -16,6 +16,7 @@ namespace ApplicationBackend.Models
     public class ClubModelClass
     {
         [Required]
+        [Key] //primary key
         public int Id { get; set; }
         
         [Required]
@@ -32,32 +33,24 @@ namespace ApplicationBackend.Models
         public string ThridKitColour { get; set; }
 
         [Required]
+        [Range(0,30)]
         public int PremierLeague { get; set; }
 
         [Required]
+        [Range(0, 30)]
         public int ChampionsLeague { get; set; }
         [Required]
+        [Range(0, 30)]
         public int FaCup { get; set; }
 
         [Required]
+        [Range(0, 30)]
         public int EuropaLeague { get; set; }
 
 
         [Required]
+        [Range(0, 30)]
         public int LeagueCup { get; set; }
-
-
-        public ClubModelClass(int Id , string TeamName, double ClubValue)
-        {
-            this.Id = Id;
-            this.TeamName = TeamName;
-            this.ClubValue = ClubValue;
-        }
-
-        public ClubModelClass()
-        {
-            
-        }
 
 
     }
