@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\x00126748\\source\\repos\\ClientSideClub\\ClientSideClub\\ClientSideClub.csproj",
+      "projectUniqueName": "C:\\Users\\x00126748\\CA2\\ClientSideClub\\ClientSideClub\\ClientSideClub.csproj",
       "projectName": "ClientSideClub",
-      "projectPath": "C:\\Users\\x00126748\\source\\repos\\ClientSideClub\\ClientSideClub\\ClientSideClub.csproj",
+      "projectPath": "C:\\Users\\x00126748\\CA2\\ClientSideClub\\ClientSideClub\\ClientSideClub.csproj",
       "packagesPath": "C:\\Users\\x00126748\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\x00126748\\source\\repos\\ClientSideClub\\ClientSideClub\\obj\\",
+      "outputPath": "C:\\Users\\x00126748\\CA2\\ClientSideClub\\ClientSideClub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -4,6 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>Stock2</ActiveDebugProfile>
+    <ActiveDebugProfile>ApplicationBackend</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

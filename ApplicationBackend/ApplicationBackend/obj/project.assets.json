@@ -11871,11 +11871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\x00126748\\Downloads\\CA2-master\\CA2\\ApplicationBackend\\ApplicationBackend\\ApplicationBackend.csproj",
+      "projectUniqueName": "C:\\Users\\x00126748\\CA2\\ApplicationBackend\\ApplicationBackend\\ApplicationBackend.csproj",
       "projectName": "ApplicationBackend",
-      "projectPath": "C:\\Users\\x00126748\\Downloads\\CA2-master\\CA2\\ApplicationBackend\\ApplicationBackend\\ApplicationBackend.csproj",
+      "projectPath": "C:\\Users\\x00126748\\CA2\\ApplicationBackend\\ApplicationBackend\\ApplicationBackend.csproj",
       "packagesPath": "C:\\Users\\x00126748\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\x00126748\\Downloads\\CA2-master\\CA2\\ApplicationBackend\\ApplicationBackend\\obj\\",
+      "outputPath": "C:\\Users\\x00126748\\CA2\\ApplicationBackend\\ApplicationBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

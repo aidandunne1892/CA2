@@ -45,7 +45,7 @@ namespace ApplicationBackend.Migrations
                     b.Property<string>("TeamName")
                         .IsRequired();
 
-                    b.Property<string>("ThridKitColour");
+                    b.Property<string>("ThirdKitColour");
 
                     b.HasKey("Id");
 

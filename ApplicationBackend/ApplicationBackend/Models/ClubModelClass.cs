@@ -30,7 +30,7 @@ namespace ApplicationBackend.Models
         [Required]
         public string AwayKitColour { get; set; }
 
-        public string ThridKitColour { get; set; }
+        public string ThirdKitColour { get; set; }
 
         [Required]
         [Range(0,30)]

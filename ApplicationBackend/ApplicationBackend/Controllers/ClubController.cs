@@ -3,16 +3,19 @@ using ApplicationBackend.Models;
 using System.Collections.Generic;
 using System.Linq;
 
+// Add-Migration InitialCreate
+// Update-Database
+
 namespace ApplicationBackend.Controllers
 {
     [Produces("application/json")]
     [Route("api/Club")]
     [ApiController]										
-    public class StockController : ControllerBase
+    public class ClubController : ControllerBase
     {
         private readonly ClubContext _context;          
 
-        public StockController(ClubContext context)
+        public ClubController(ClubContext context)
         {
             _context = context;
         }
@@ -43,23 +46,133 @@ namespace ApplicationBackend.Controllers
         }
 
 
-        // DELETE api/Club/Chelsea
-        [HttpDelete("{name:alpha}")]
-        [ProducesResponseType(200)]             
-        [ProducesResponseType(404)]             
-        public ActionResult<ClubModelClass> DeleteClub([FromRoute] string name)
+        // GET: api/Club/TotalTrophyCount/Liverpool
+        [HttpGet("TotalTrophyCount/{teamName:alpha}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(200)]
+        public ActionResult<double> GetTotalNumberOfTrophies(string teamName)
         {
-            var team = _context.ClubModelClass.SingleOrDefault(l => l.TeamName.ToUpper() == name.ToUpper());
+
+            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
+            var prem = team.PremierLeague;
+            var champ = team.ChampionsLeague;
+            var facup = team.FaCup;
+            var europa = team.EuropaLeague;
+            var leaguecup = team.LeagueCup;
+
+            double TrophyCount = prem + champ + facup + europa + leaguecup;
             if (team != null)
             {
-                _context.ClubModelClass.Remove(team);
-                _context.SaveChanges();            
-                return Ok(team);                  
+                return Ok(TrophyCount);
             }
             else
             {
                 return NotFound();
             }
         }
+
+        // GET: api/Club/PremierLeagueCount/Liverpool
+        [HttpGet("PremierLeagueCount/{teamName:alpha}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(200)]
+        public ActionResult<double> GetTotalPremierLeague(string teamName)
+        {
+
+            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
+            var prem = team.PremierLeague;
+
+            if (team != null)
+            {
+                return Ok(prem);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
+        // GET: api/Club/ChampionsLeagueCount/Liverpool
+        [HttpGet("ChampionsLeagueCount/{teamName:alpha}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(200)]
+        public ActionResult<double> GetTotalChampionsLeague(string teamName)
+        {
+
+            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
+            var champ = team.ChampionsLeague;
+
+            if (team != null)
+            {
+                return Ok(champ);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
+        // GET: api/Club/FaCupCount/Liverpool
+        [HttpGet("FaCupCount/{teamName:alpha}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(200)]
+        public ActionResult<double> GetTotalFaCup(string teamName)
+        {
+
+            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
+            var facup = team.FaCup;
+
+            if (team != null)
+            {
+                return Ok(facup);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
+        // GET: api/Club/EuropaLeagueCount/Liverpool
+        [HttpGet("EuropaLeagueCount/{teamName:alpha}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(200)]
+        public ActionResult<double> GetTotalEuropaLeague(string teamName)
+        {
+
+            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
+            var europa = team.EuropaLeague;
+ 
+            if (team != null)
+            {
+                return Ok(europa);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        // GET: api/Club/LeagueCupCount/Liverpool
+        [HttpGet("LeagueCupCount/{teamName:alpha}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(200)]
+        public ActionResult<double> GetTotalLeagueCup(string teamName)
+        {
+
+            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
+            var leaguecup = team.LeagueCup;
+
+            if (team != null)
+            {
+                return Ok(leaguecup);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }

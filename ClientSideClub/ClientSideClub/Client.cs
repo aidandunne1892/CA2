@@ -1,6 +1,4 @@
-﻿// Console client for Stock RESTful service
-// CRUD calls
-
+﻿
 using ApplicationBackend.Models;
 using System;
 using System.Collections.Generic;
@@ -40,6 +38,15 @@ namespace ClientSideClub
                 Console.WriteLine("///////// One Particular Club: ///////// \n");
                 Console.WriteLine("Club Details: ");
                 Console.WriteLine(club.ToString());
+
+
+                // GET api/currencyexchange/quote/EUR/USD/100
+                double trophyCount = double.Parse(await client.GetStringAsync(baseURI + "TotalTrophyCount/Chelsea"));
+                Console.WriteLine("");
+                Console.WriteLine("///////// Trophy Count: ///////// \n");
+                Console.WriteLine("Chelsea Trophy Count: " + trophyCount);
+
+
 
             }
             catch (HttpRequestException e1)

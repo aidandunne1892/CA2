@@ -20,7 +20,7 @@ namespace ApplicationBackend.Models
         public string AwayKitColour { get; set; }
 
         [DataMember(Name = "thirdKitColour")]
-        public string ThridKitColour { get; set; }
+        public string ThirdKitColour { get; set; }
 
         [DataMember(Name = "premierLeague")]
         public int PremierLeague { get; set; }
@@ -34,7 +34,7 @@ namespace ApplicationBackend.Models
         [DataMember(Name = "europaLeague")]
         public int EuropaLeague { get; set; }
 
-        [DataMember(Name = "leaueCup")]
+        [DataMember(Name = "leagueCup")]
         public int LeagueCup { get; set; }
 
 
@@ -44,12 +44,12 @@ namespace ApplicationBackend.Models
                    "\nClub Value: " + ClubValue +
                    "\nHome Kit: " + HomeKitColour +
                    "\nAway Kit: " + AwayKitColour +
-                   "\nThird Kit: " + ThridKitColour +
+                   "\nThird Kit: " + ThirdKitColour +
                    "\nPremier League: " + PremierLeague +
                    "\nChampions League: " + ChampionsLeague +
                    "\nFa Cup: " + FaCup +
                    "\nEuropa League: " + EuropaLeague +
-                   "\nLeague Cup: " + LeagueCup+ "\n";
+                   "\nLeague Cup: " + LeagueCup + "\n";
         }
 
 

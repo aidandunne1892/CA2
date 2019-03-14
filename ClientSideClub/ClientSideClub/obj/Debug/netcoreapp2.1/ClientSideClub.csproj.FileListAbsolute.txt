@@ -9,3 +9,14 @@ C:\Users\x00126748\source\repos\ClientSideClub\ClientSideClub\obj\Debug\netcorea
 C:\Users\x00126748\source\repos\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.AssemblyInfo.cs
 C:\Users\x00126748\source\repos\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.dll
 C:\Users\x00126748\source\repos\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.pdb
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\bin\Debug\netcoreapp2.1\ClientSideClub.deps.json
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\bin\Debug\netcoreapp2.1\ClientSideClub.runtimeconfig.json
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\bin\Debug\netcoreapp2.1\ClientSideClub.runtimeconfig.dev.json
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\bin\Debug\netcoreapp2.1\ClientSideClub.dll
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\bin\Debug\netcoreapp2.1\ClientSideClub.pdb
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.csprojAssemblyReference.cache
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.csproj.CoreCompileInputs.cache
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.AssemblyInfoInputs.cache
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.AssemblyInfo.cs
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.dll
+C:\Users\x00126748\CA2\ClientSideClub\ClientSideClub\obj\Debug\netcoreapp2.1\ClientSideClub.pdb
