@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -19,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+       final TextView textView = findViewById(R.id.simpleTextView);
+        textView.setText(R.string.Premier_League_Team);
 
-        TextView textView = (TextView)findViewById(R.id.simpleTextView);
 
-        textView.setText("Premier League Teams");
 
-        Spinner mySpinner = (Spinner) findViewById(R.id.SpinnerTeams);
+        Spinner mySpinner =  findViewById(R.id.SpinnerTeams);
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Teams));
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         myAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 mySpinner.setAdapter(myAdaptor);
+
+
     }
 
     @Override

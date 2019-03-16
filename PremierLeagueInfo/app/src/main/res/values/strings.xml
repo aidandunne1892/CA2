@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PremierLeagueInfo</string>
     <string name="action_settings">Settings</string>
-
+    <string name ="Premier_League_Team">Select Team</string>
 
     <string-array name="Teams">
         <item>AFC Bournemouth</item>
