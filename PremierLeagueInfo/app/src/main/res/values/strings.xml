@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">PremierLeagueInfo</string>
     <string name="action_settings">Settings</string>
+    <!--For Text Above the Drop Down List-->
     <string name ="Premier_League_Team">Select Team</string>
 
+    <!--text for the send button-->
+    <string name="Send_Button_txt">Send Data</string>
+
+
+
+    <!--Text For the dropDown Menu-->
     <string-array name="Teams">
         <item>AFC Bournemouth</item>
         <item>Arsenal</item>

@@ -13,7 +13,7 @@
         android:layout_width="395dp"
         android:layout_height="59dp"
         android:singleLine="true"
-
+        android:text="@string/Premier_League_Team"
         android:textColor="#900002"
         android:textSize="80px"
 
@@ -26,21 +26,24 @@
         android:id="@+id/SpinnerTeams"
         android:layout_width="395dp"
         android:layout_height="89dp"
-
+        android:layout_marginTop="50px"
+        android:singleLine="true"
         android:layout_below="@+id/simpleTextView"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="75dp" />
 
 
+    <Button
+        android:id="@+id/SendToApi"
+        android:layout_width="112dp"
+        android:layout_height="59dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/Send_Button_txt"
 
-    <!--<Button-->
-        <!--android:id="@+id/SendToApi"-->
-        <!--android:layout_width="112dp"-->
-        <!--android:layout_height="59dp"-->
-        <!--android:text="Send Team"-->
-        <!--android:layout_below="@+id/SpinnerTeams"-->
-        <!--tools:layout_editor_absoluteX="282dp"-->
-        <!--tools:layout_editor_absoluteY="178dp" />-->
+        android:background="@color/buttonColor"
+        />
+
 
 
 </android.support.constraint.ConstraintLayout>
