@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -12,8 +13,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
-String url = "www.something.com";
-    RequestQueue queue = Volley.newRequestQueue(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +23,8 @@ String url = "www.something.com";
 
 
 
-
+//        start of block for the drop down menu with list of teams
         Spinner mySpinner =  findViewById(R.id.SpinnerTeams);
-
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Teams));
 
@@ -34,7 +33,23 @@ String url = "www.something.com";
                 mySpinner.setAdapter(myAdaptor);
 
 
-                Button sendButton = findViewById(R.id.SendToApi);
+//        end of block for the drop down menu with list of teams
+
+
+//        start of button block
+        String selected_text= mySpinner.getSelectedItem().toString();
+        Button btn = findViewById(R.id.SendToApi);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+//        End of button block
+
+
 
 
     }
@@ -60,4 +75,7 @@ String url = "www.something.com";
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

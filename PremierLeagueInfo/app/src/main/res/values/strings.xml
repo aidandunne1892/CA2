@@ -6,8 +6,8 @@
 
     <!--text for the send button-->
     <string name="Send_Button_txt">Send Data</string>
-
-
+    <!--text for the Header-->
+    <string name="header_txt">Premier League Ca App</string>
 
     <!--Text For the dropDown Menu-->
     <string-array name="Teams">

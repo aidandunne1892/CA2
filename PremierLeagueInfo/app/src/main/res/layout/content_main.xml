@@ -12,38 +12,49 @@
         android:id="@+id/simpleTextView"
         android:layout_width="395dp"
         android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
         android:singleLine="true"
+
+
         android:text="@string/Premier_League_Team"
         android:textColor="#900002"
         android:textSize="80px"
-
-
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/SpinnerTeams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Spinner
         android:id="@+id/SpinnerTeams"
         android:layout_width="395dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="50px"
-        android:singleLine="true"
+        android:layout_height="99dp"
         android:layout_below="@+id/simpleTextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="75dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="384dp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/SendToApi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleTextView" />
 
 
     <Button
         android:id="@+id/SendToApi"
         android:layout_width="112dp"
         android:layout_height="59dp"
-         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/Send_Button_txt"
-
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="48dp"
         android:background="@color/buttonColor"
-        />
 
+        android:text="@string/Send_Button_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
