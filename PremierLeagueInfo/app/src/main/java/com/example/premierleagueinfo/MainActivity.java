@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
@@ -20,36 +21,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
-
 //        start of block for the drop down menu with list of teams
-        Spinner mySpinner =  findViewById(R.id.SpinnerTeams);
+        final Spinner mySpinner = findViewById(R.id.SpinnerTeams);
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Teams));
 
 
         myAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                mySpinner.setAdapter(myAdaptor);
+        mySpinner.setAdapter(myAdaptor);
 
 
 //        end of block for the drop down menu with list of teams
 
 
 //        start of button block
-        String selected_text= mySpinner.getSelectedItem().toString();
-        Button btn = findViewById(R.id.SendToApi);
 
+        Button btn = findViewById(R.id.SendToApi);
+        final TextView onClickText = findViewById(R.id.onClickEventText);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String selected_text = mySpinner.getSelectedItem().toString();
+                onClickText.setText(selected_text+" was selected");
             }
         });
 
 //        End of button block
-
-
 
 
     }
@@ -75,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }
