@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApplicationBackend.Migrations
 {
     [DbContext(typeof(ClubContext))]
-    [Migration("20190314103549_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190322132343_SomeDataAdded")]
+    partial class SomeDataAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

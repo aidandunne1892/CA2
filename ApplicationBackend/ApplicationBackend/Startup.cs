@@ -36,12 +36,13 @@ namespace ApplicationBackend
                 c.SwaggerDoc("v1", new Info { Title = "Club API", Version = "v1" });
             });
 
+            // Add-Migration InitialCreate
+            // Update-Database
 
-            // register Stock2Context as a service (for DI into controllers)
             services.AddDbContext<ClubContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ClubContext")));
 
-            // cf connection string in appsettings.json
+     
 
         }
 
@@ -54,7 +55,6 @@ namespace ApplicationBackend
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
