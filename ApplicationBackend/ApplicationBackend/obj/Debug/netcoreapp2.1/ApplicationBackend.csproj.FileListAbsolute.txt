@@ -26,3 +26,4 @@ C:\Users\x00126748\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreap
 C:\Users\x00126748\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.RazorTargetAssemblyInfo.cache
 C:\Users\x00126748\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.dll
 C:\Users\x00126748\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\ApplicationBackend.pdb
+C:\Users\x00126748\CA2\ApplicationBackend\ApplicationBackend\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
