@@ -53,16 +53,16 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalNumberOfTrophies(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
-            var prem = team.PremierLeague;
-            var champ = team.ChampionsLeague;
-            var facup = team.FaCup;
-            var europa = team.EuropaLeague;
-            var leaguecup = team.LeagueCup;
-
-            double TrophyCount = prem + champ + facup + europa + leaguecup;
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
             if (team != null)
             {
+                var prem = team.PremierLeague;
+                var champ = team.ChampionsLeague;
+                var facup = team.FaCup;
+                var europa = team.EuropaLeague;
+                var leaguecup = team.LeagueCup;
+
+                var TrophyCount = prem + champ + facup + europa + leaguecup;
                 return Ok(TrophyCount);
             }
             else
@@ -78,11 +78,11 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalPremierLeague(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
-            var prem = team.PremierLeague;
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
 
             if (team != null)
             {
+                var prem = team.PremierLeague;
                 return Ok(prem);
             }
             else
@@ -99,11 +99,11 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalChampionsLeague(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
-            var champ = team.ChampionsLeague;
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
 
             if (team != null)
             {
+                var champ = team.ChampionsLeague;
                 return Ok(champ);
             }
             else
@@ -120,11 +120,11 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalFaCup(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
-            var facup = team.FaCup;
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
 
             if (team != null)
             {
+                var facup = team.FaCup;
                 return Ok(facup);
             }
             else
@@ -141,11 +141,11 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalEuropaLeague(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
-            var europa = team.EuropaLeague;
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
  
             if (team != null)
             {
+                var europa = team.EuropaLeague;
                 return Ok(europa);
             }
             else
@@ -161,11 +161,11 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalLeagueCup(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => (p.TeamName == teamName.ToUpper()));
-            var leaguecup = team.LeagueCup;
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
 
             if (team != null)
             {
+                var leaguecup = team.LeagueCup;
                 return Ok(leaguecup);
             }
             else
