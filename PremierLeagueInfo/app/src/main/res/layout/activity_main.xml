@@ -15,11 +15,12 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="18sp"
             android:text="@string/header_txt"
-            android:textColor="#999999"
+            android:textColor="#fff"
             android:textSize="30sp"
             android:visibility="visible"
-             />
+            android:layout_marginStart="18sp" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"

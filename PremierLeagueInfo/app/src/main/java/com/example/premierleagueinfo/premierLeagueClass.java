@@ -15,9 +15,10 @@ public class premierLeagueClass {
 
     public String toString()
     {
-        return "Team Name: "+teamName + "\n "
+        return "Team Name: "+teamName + "\n"
                 +"Home Kit: "+ homeKitColour+"\n"
                 +"Away Kit: "+ awayKitColour+"\n"
+                +"Third Kit: "+thirdKitColour+"\n"
                 +"Club Value: "+ clubValue+"\n";
     }
 

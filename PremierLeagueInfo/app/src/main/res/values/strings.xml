@@ -2,17 +2,17 @@
     <string name="app_name">PremierLeagueInfo</string>
     <string name="action_settings">Settings</string>
     <!--For Text Above the Drop Down List-->
-    <string name ="Premier_League_Team">Select Team</string>
+    <string name ="Premier_League_Team">Premier League Teams </string>
 
     <!--text for the send button-->
-    <string name="Send_Button_txt">Send Data</string>
+    <string name="Send_Button_txt">Club Info</string>
     <!--text for the Header-->
-    <string name="header_txt">Premier League Ca App</string>
+    <string name="header_txt">Premier League 2018/2019</string>
 
     <!--Text For the dropDown Menu-->
     <string-array name="Teams">
-        <item>AFC Bournemouth</item>
-        <item>Arsenal</item>
+        <item>Arsenal </item>
+        <item>Bournemouth</item>
         <item>Brighton</item>
         <item>Burnley</item>
         <item>Cardiff City</item>
@@ -20,16 +20,16 @@
         <item>Crystal Palace</item>
         <item>Everton</item>
         <item>Fulham</item>
-        <item>Huddersfield Town</item>
+        <item>Huddersfield</item>
         <item>Leicester CIty</item>
         <item>Liverpool</item>
         <item>Manchester City</item>
         <item>Manchester United</item>
         <item>Newcastle United</item>
         <item>Southampton</item>
-        <item>Tottenham Hotspur</item>
+        <item>Tottenham </item>
         <item>WatFord</item>
-        <item>West Ham United</item>
-        <item>Wolverhamton Wanderers</item>
+        <item>West Ham</item>
+        <item>Wolves</item>
     </string-array>
 </resources>

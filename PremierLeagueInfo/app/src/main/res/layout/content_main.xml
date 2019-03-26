@@ -12,68 +12,34 @@
         android:id="@+id/simpleTextView"
         android:layout_width="395dp"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:singleLine="true"
-
-
         android:text="@string/Premier_League_Team"
-        android:textColor="#900002"
-        android:textSize="80px"
-        app:layout_constraintBottom_toTopOf="@+id/SpinnerTeams"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Spinner
-        android:id="@+id/SpinnerTeams"
+    <ListView
+        android:id="@+id/listview"
         android:layout_width="395dp"
-        android:layout_height="99dp"
-        android:layout_below="@+id/simpleTextView"
+        android:layout_height="552dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="384dp"
-        android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/SendToApi"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simpleTextView" />
-
-
-    <Button
-        android:id="@+id/SendToApi"
-        android:layout_width="112dp"
-        android:layout_height="59dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="48dp"
-        android:background="@color/buttonColor"
-
-        android:text="@string/Send_Button_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <TextView
-        android:id="@+id/onClickEventText"
-        android:layout_width="238dp"
-        android:layout_height="335dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginLeft="177dp"
-        android:layout_marginTop="143dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:layout_marginBottom="331dp"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SpinnerTeams"
-        app:layout_constraintVertical_bias="0.361" />
 
 
 </android.support.constraint.ConstraintLayout>
