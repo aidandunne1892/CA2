@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{44AC7EAB-113C-46D6-96D8-2B60744BD76B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApplicationBackend/Controllers/ClubController.cs">
+    <Files>
+      <File FileName="ApplicationBackend/Controllers/ClubController.cs" Line="51" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ApplicationBackend PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

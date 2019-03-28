@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="ApplicationBackendapi" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\x00126748\\CA2\\ApplicationBackend\\ApplicationBackend\\obj\\Release\\netcoreapp2\.1\\PubTmp\\Out\\$" />
+  <parameter name="IIS Web Application Name" description="" value="ApplicationBackend" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^/Users/aidandunne/Desktop/test/ApplicationBackend/ApplicationBackend/obj/Release/netcoreapp2\.1/PubTmp/Out/$" />
   </parameter>
 </parameters>

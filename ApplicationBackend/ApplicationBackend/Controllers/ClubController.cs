@@ -34,7 +34,7 @@ namespace ApplicationBackend.Controllers
         public ActionResult<ClubModelClass> GetClubByName([FromRoute] string teamName)
         {
             // LINQ query, find matching club (case-insensitive) or default value (null) if none matching
-            ClubModelClass club = _context.ClubModelClass.SingleOrDefault(l => l.TeamName.ToUpper() == teamName.ToUpper());
+            ClubModelClass club = _context.ClubModelClass.SingleOrDefault(l => l.TeamName.Replace(" ", "").ToUpper() == teamName.Replace(" ", "").ToUpper());
             if (club == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace ApplicationBackend.Controllers
         public ActionResult<double> GetTotalNumberOfTrophies(string teamName)
         {
 
-            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.ToUpper() == teamName.ToUpper());
+            var team = _context.ClubModelClass.FirstOrDefault(p => p.TeamName.Replace(" ", "").ToUpper() == teamName.Replace(" ", "").ToUpper());
             if (team != null)
             {
                 var prem = team.PremierLeague;

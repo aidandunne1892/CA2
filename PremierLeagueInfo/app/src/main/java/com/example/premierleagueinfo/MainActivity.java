@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private String url = "https://applicationbackendapi.azurewebsites.net/api/";
+    private String url = "https://applicationbackend.azurewebsites.net/api/";
     private String TAG = "premierleagueinfo";
 
 
