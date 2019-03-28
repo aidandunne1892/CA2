@@ -10,7 +10,7 @@
         android:layout_width="61dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/arsenal" />
+         />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/lblListHeader"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="15sp"

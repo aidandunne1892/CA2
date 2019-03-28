@@ -33,6 +33,11 @@
 
     <include layout="@layout/content_main" />
 
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
 
 
 </android.support.design.widget.CoordinatorLayout>

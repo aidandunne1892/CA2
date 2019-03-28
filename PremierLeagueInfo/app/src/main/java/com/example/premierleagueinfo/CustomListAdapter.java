@@ -1,7 +1,6 @@
 package com.example.premierleagueinfo;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +32,7 @@ public class CustomListAdapter extends ArrayAdapter {
         LayoutInflater inflater=context.getLayoutInflater();
         View rowView=inflater.inflate(R.layout.listview_row, null,true);
 
-        TextView nameTextField = (TextView) rowView.findViewById(R.id.textView4);
+        TextView nameTextField = (TextView) rowView.findViewById(R.id.lblListHeader);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView2);
 
         nameTextField.setText(nameArray[position]);
