@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class MainActivity extends AppCompatActivity {
     private String url = "https://applicationbackend.azurewebsites.net/api/";
@@ -65,12 +66,7 @@ public class MainActivity extends AppCompatActivity {
         expListView.setAdapter(listAdapter);
 
 
-        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-            @Override
-            public void onGroupExpand(int groupPosition) {
-                setChild(groupPosition);
-            }
-        });
+
     }
 
 
@@ -78,28 +74,35 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void setChild(int groupPostion){
+    public String setChild(String teamName){
         final List<String> ClubInfo = new ArrayList<String>();
-        Toast.makeText(getApplicationContext(),
+        ClubInfo.add(teamName);
+       /* Toast.makeText(getApplicationContext(),
                 listDataHeader.get(groupPostion) + " Expanded",
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show();*/
 
         try
         {
             // make a string request (JSON request an alternative)
             RequestQueue queue = Volley.newRequestQueue(this);
+
             Log.d(TAG, "Making request");
             try
             {
-                StringRequest strObjRequest = new StringRequest(Request.Method.GET, url+"club/"+listDataHeader.get(groupPostion),
+
+
+                StringRequest strObjRequest = new StringRequest(Request.Method.GET, url+"club/"+teamName,
                         new Response.Listener<String>()
                         {
+
                             @Override
                             public void onResponse(String response)
                             {
                                 // parse resulting string containing JSON to Greeting object
                                 premierLeagueClass info = new Gson().fromJson(response, premierLeagueClass.class);
                                 ClubInfo.add(info.toString());
+
+
 
                                 Toast.makeText(getApplicationContext(),
                                         info.toString() + " Expanded",
@@ -112,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error)
                             {
-                                ClubInfo.add((error.toString()));
+                                // ClubInfo.add((error.toString()));
                                 Log.d(TAG, "Error" + error.toString());
                             }
                         });
@@ -121,18 +124,23 @@ public class MainActivity extends AppCompatActivity {
             catch (Exception e1)
             {
                 Log.d(TAG, e1.toString());
-                ClubInfo.add((e1.toString()));
+                // ClubInfo.add((e1.toString()));
             }
         }
         catch (Exception e2)
         {
             Log.d(TAG, e2.toString());
-            ClubInfo.add((e2.toString()));
+            // ClubInfo.add((e2.toString()));
         }
 
 
-
-       // listDataChild.put(listDataHeader.get(groupPostion), ClubInfo);
+        try {
+            return ClubInfo.get(1);
+        }
+        catch(IndexOutOfBoundsException ex){
+            return ClubInfo.get(0);
+        }
+        // listDataChild.put(listDataHeader.get(groupPostion), ClubInfo);
     }
 
 
@@ -145,35 +153,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Adding child data
 
+        for (int i =1 ;i<listDataHeader.size();i++) {
+            // Adding child data
+            List<String> TeamData = new ArrayList<String>();
+            TeamData.add(setChild(listDataHeader.get(i)));
 
-        // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
-
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
-
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+            listDataChild.put(listDataHeader.get(i), TeamData);
+        }
     }
 
 
