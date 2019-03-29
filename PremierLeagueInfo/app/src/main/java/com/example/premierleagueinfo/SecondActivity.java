@@ -1,10 +1,12 @@
 package com.example.premierleagueinfo;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -35,6 +37,16 @@ public class SecondActivity extends AppCompatActivity {
 
 
         premierLeagueCall(temp);
+
+        Button btn = findViewById(R.id.returnButton);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(SecondActivity.this, MainActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
         //textView.setText(temp);
     }

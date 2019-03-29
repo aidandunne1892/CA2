@@ -16,10 +16,19 @@ public class premierLeagueClass {
     public String toString()
     {
         return "Team Name: "+teamName + "\n"
-                +"Home Kit: "+ homeKitColour+"\n"
+                +"Home Kit:"+ homeKitColour+"\n"
                 +"Away Kit: "+ awayKitColour+"\n"
                 +"Third Kit: "+thirdKitColour+"\n"
-                +"Club Value: "+ clubValue+"\n";
+                +"Club Value:£"+ clubValue+"\n"
+                +"Premier League's   won:"+ premierLeague+"\n"
+                +"Champions League's won:"+ championsLeague+"\n"
+                +"Fa Cup Titles "+ faCup+"\n"
+                +"Europa League's won: "+ europaLeague+"\n"
+                +"League cups won: "+ leagueCup+"\n";
+
+
+
+
     }
 
 }

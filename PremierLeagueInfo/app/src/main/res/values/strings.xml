@@ -9,6 +9,8 @@
     <!--text for the Header-->
     <string name="header_txt">Premier League 2018/2019</string>
 
+    <string name="return_button_txt">Return</string>
+
     <!--Text For the dropDown Menu-->
     <string-array name="Teams">
         <item>Arsenal </item>
