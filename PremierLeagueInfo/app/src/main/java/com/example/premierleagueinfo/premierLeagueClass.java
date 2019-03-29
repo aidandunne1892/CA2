@@ -2,7 +2,7 @@ package com.example.premierleagueinfo;
 
 public class premierLeagueClass {
     private String teamName;
-    private int clubValue;
+    private long clubValue;
     private String homeKitColour;
     private String awayKitColour;
     private String thirdKitColour;

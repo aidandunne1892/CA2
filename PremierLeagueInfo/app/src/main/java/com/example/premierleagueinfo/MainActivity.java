@@ -55,10 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
                 String test = whatever.getItem(position).toString();
 
+                String test1 = test.replaceAll("\\s+", "");
+
 
                 Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
 
-                myIntent.putExtra("testValue", test);
+                myIntent.putExtra("testValue", test1);
 
                 startActivity(myIntent);
 
