@@ -2,7 +2,7 @@
     <string name="app_name">PremierLeagueInfo</string>
     <string name="action_settings">Settings</string>
     <!--For Text Above the Drop Down List-->
-    <string name ="Premier_League_Team">Premier League Teams </string>
+    <string name="Premier_League_Team">Premier League Teams </string>
 
     <!--text for the send button-->
     <string name="Send_Button_txt">Club Info</string>

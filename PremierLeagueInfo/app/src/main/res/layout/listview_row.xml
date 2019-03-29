@@ -9,8 +9,8 @@
         android:id="@+id/imageView2"
         android:layout_width="61dp"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
-         />
+        android:contentDescription="@string/header_txt"
+        app:srcCompat="@drawable/arsenal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,12 +18,12 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lblListHeader"
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="15sp"
             android:gravity="center_horizontal"
-            android:text="@string/app_name"
+            android:text="@string/header_txt"
             android:textColor="@color/colorPrimary"
             android:textSize="35sp" />
     </LinearLayout>
