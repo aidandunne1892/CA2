@@ -4,26 +4,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomListAdapter extends ArrayAdapter {
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CustomListAdapter extends ArrayAdapter implements Filterable {
 
     //to reference the Activity
     private final Activity context;
-
+    private List<String>filteredData = null;
     //to store the team images
-    private final Integer[] imageIDarray;
+    private final ArrayList<Integer> imageIDarray;
 
     //to store the list of teams
-    private final String[] nameArray;
+    private final ArrayList<String> nameArray;
+    private String[] origData;
 
-    public CustomListAdapter(Activity context, Integer[] imageIDarray, String[] nameArray) {
+    public CustomListAdapter(Activity context, ArrayList<Integer> imageIDarray, ArrayList<String> nameArray) {
         super(context, R.layout.listview_row, nameArray);
 
         this.context = context;
         this.imageIDarray = imageIDarray;
         this.nameArray = nameArray;
+
+
     }
 
 
@@ -34,10 +44,14 @@ public class CustomListAdapter extends ArrayAdapter {
         TextView nameTextField = (TextView) rowView.findViewById(R.id.textView4);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView2);
 
-        nameTextField.setText(nameArray[position]);
-        imageView.setImageResource(imageIDarray[position]);
+        nameTextField.setText(nameArray.get(position));
+        imageView.setImageResource(imageIDarray.get(position));
 
         return rowView;
 
-    };
+    }
+
+
+
+
 }

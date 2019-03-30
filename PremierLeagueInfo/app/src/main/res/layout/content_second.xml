@@ -41,6 +41,7 @@
         android:layout_marginBottom="55dp"
         android:background="@color/returnButtonColor"
         android:text="@string/return_button_txt"
+        android:textColor="@color/returnButtonTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
