@@ -11,22 +11,21 @@
     <TextView
         android:id="@+id/txtItem"
         android:layout_width="378dp"
-        android:layout_height="446dp"
+        android:layout_height="411dp"
+
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
-        android:layout_marginBottom="36dp"
-
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="47dp"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/returnButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/returnButton"
@@ -34,15 +33,29 @@
         android:layout_height="64dp"
         android:layout_marginStart="238dp"
         android:layout_marginLeft="238dp"
-        android:layout_marginTop="29dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginBottom="68dp"
-        android:text="@string/return_button_txt"
+        android:layout_marginBottom="38dp"
         android:background="@color/returnButtonColor"
+        android:text="@string/return_button_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="92dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginLeft="159dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_marginBottom="34dp"
+        android:contentDescription="@string/Premier_League_Team"
+        app:layout_constraintBottom_toTopOf="@+id/txtItem"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtItem" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arsenal" />
 </android.support.constraint.ConstraintLayout>

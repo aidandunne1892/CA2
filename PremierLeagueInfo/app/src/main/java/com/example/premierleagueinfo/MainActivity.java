@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Resources res = getResources();
         String[] teams = res.getStringArray(R.array.Teams);
 
-        Integer[] images = {R.drawable.arsenal, R.drawable.bournmath, R.drawable.brighton, R.drawable.burnley, R.drawable.cardiff,
+        final Integer[] images = {R.drawable.arsenal, R.drawable.bournmath, R.drawable.brighton, R.drawable.burnley, R.drawable.cardiff,
                 R.drawable.chelsea, R.drawable.crystal, R.drawable.everton, R.drawable.fulham, R.drawable.huddelsfield,
                 R.drawable.leicester, R.drawable.liverpool, R.drawable.mancity, R.drawable.manu, R.drawable.newcastle,
                 R.drawable.southhampton, R.drawable.spurs, R.drawable.watford, R.drawable.westham, R.drawable.wolves};
@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+
+                Bundle bundle = new Bundle();
+
+                bundle.putInt("imageValue", images[position]);
+
+                myIntent.putExtras(bundle);
 
                 myIntent.putExtra("testValue", team);
 

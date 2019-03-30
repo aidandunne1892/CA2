@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -22,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
     private String url ="https://applicationbackend.azurewebsites.net/api/";
     private String TAG ="premierleagueinfo";
     TextView textView;
+    ImageView imageView;
 
 
     @Override
@@ -31,10 +33,15 @@ public class SecondActivity extends AppCompatActivity {
 
 
         textView = (TextView) findViewById(R.id.txtItem);
+        imageView = (ImageView) findViewById(R.id.image2);
 
         String temp = getIntent().getStringExtra("testValue");
 
+        Bundle bundle = this.getIntent().getExtras();
 
+        int crestImage = bundle.getInt("imageValue");
+
+        imageView.setImageResource(crestImage);
 
         premierLeagueCall(temp);
 
@@ -48,7 +55,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        //textView.setText(temp);
+
     }
 
 
