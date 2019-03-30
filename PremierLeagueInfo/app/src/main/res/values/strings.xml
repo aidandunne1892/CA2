@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">"Premier League Info"</string>
-    <string name="action_settings">"Réglages"</string>
+    <string name="app_name">PremierLeagueInfo</string>
+    <string name="action_settings">Settings</string>
     <!--For Text Above the Drop Down List-->
-    <string name="Premier_League_Team">"Equipes de Premier League "</string>
+    <string name="Premier_League_Team">Premier League Teams </string>
 
     <!--text for the send button-->
-
+    
     <!--text for the Header-->
-    <string name="header_txt">"Premier League 2018/2019"</string>
+    <string name="header_txt">Premier League 2018/2019</string>
 
-    <string name="return_button_txt">Revenir</string>
+    <string name="return_button_txt">Return</string>
 
     <!--Text For the dropDown Menu-->
     <string-array name="Teams">
