@@ -20,6 +20,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -32,11 +33,14 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class ClickingAndCheckingTextTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
+
+    //test checks that the  all the teams the user should see when
+    //the app first opens up
     @Test
     public void CheckTeamsDisplayed() {
         ViewInteraction textView = onView(
@@ -69,26 +73,19 @@ public class MainActivityTest {
                         isDisplayed()));
         textView5.check(matches(isDisplayed()));
 
-        ViewInteraction textView6 = onView(
-                allOf(withId(R.id.textView4), withText("Chelsea"),
 
-                        isDisplayed()));
-        textView6.check(matches(isDisplayed()));
 
 
     }
 
-
+//test checks that the user can press return to get back to
+    //the home screen after clicking a team
 
     @Test
-    public void mainActivityArsenal() {
+    public void SelectTeamAndSelectReturn() {
         ViewInteraction textView = onView(
                 allOf(withId(R.id.textView4), withText("Arsenal"),
-                        childAtPosition(
-                                childAtPosition(
-                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
-                                        1),
-                                0),
+
                         isDisplayed()));
         textView.check(matches(isDisplayed()));
 
@@ -96,7 +93,7 @@ public class MainActivityTest {
                 .inAdapterView(allOf(withId(R.id.listview),
                         childAtPosition(
                                 withClassName(is("android.support.constraint.ConstraintLayout")),
-                                1)))
+                                2)))
                 .atPosition(0);
         linearLayout.perform(click());
 
@@ -114,16 +111,13 @@ public class MainActivityTest {
     }
 
 
-
+//test checks that the user can press back to get back to
+    //the home screen instead of return
     @Test
-    public void mainActivityBournemouth() {
+    public void SelectTeamAndPressBack() {
         ViewInteraction textView = onView(
                 allOf(withId(R.id.textView4), withText("Bournemouth"),
-                        childAtPosition(
-                                childAtPosition(
-                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
-                                        1),
-                                0),
+
                         isDisplayed()));
         textView.check(matches(isDisplayed()));
 
@@ -131,7 +125,7 @@ public class MainActivityTest {
                 .inAdapterView(allOf(withId(R.id.listview),
                         childAtPosition(
                                 withClassName(is("android.support.constraint.ConstraintLayout")),
-                                1)))
+                                2)))
                 .atPosition(1);
         linearLayout.perform(click());
 
@@ -141,11 +135,7 @@ public class MainActivityTest {
                         isDisplayed()));
         textView2.check(matches(isDisplayed()));
 
-        ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.returnButton), withText("Return"),
-
-                        isDisplayed()));
-        appCompatButton.perform(click());
+       pressBack();
 
         ViewInteraction textView3 = onView(
                 allOf(withId(R.id.textView4), withText("Bournemouth"),
@@ -155,16 +145,13 @@ public class MainActivityTest {
     }
 
 
-
+    //test checks that the user can press a team then goto the home Screen via return
+    //button the select another team
     @Test
-    public void mainActivityTestBrighton() {
+    public void selectTeam_Return_selectAnother() {
         ViewInteraction textView = onView(
                 allOf(withId(R.id.textView4), withText("Brighton"),
-                        childAtPosition(
-                                childAtPosition(
-                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
-                                        1),
-                                0),
+
                         isDisplayed()));
         textView.check(matches(isDisplayed()));
 
@@ -172,7 +159,7 @@ public class MainActivityTest {
                 .inAdapterView(allOf(withId(R.id.listview),
                         childAtPosition(
                                 withClassName(is("android.support.constraint.ConstraintLayout")),
-                                1)))
+                                2)))
                 .atPosition(2);
         linearLayout.perform(click());
 
@@ -192,14 +179,75 @@ public class MainActivityTest {
 
         ViewInteraction textView3 = onView(
                 allOf(withId(R.id.textView4), withText("Brighton"),
-                        childAtPosition(
-                                childAtPosition(
-                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
-                                        1),
-                                0),
+
                         isDisplayed()));
         textView3.check(matches(isDisplayed()));
+
+        ViewInteraction textView4 = onView(
+                allOf(withId(R.id.textView4), withText("Bournemouth"),
+
+                        isDisplayed()));
+        textView.check(matches(isDisplayed()));
+
+        DataInteraction linearLayout1 = onData(anything())
+                .inAdapterView(allOf(withId(R.id.listview),
+                        childAtPosition(
+                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                2)))
+                .atPosition(1);
+        linearLayout1.perform(click());
     }
+
+
+
+    //test checks that the user can press a team then goto the home Screen via back
+    //button then select another team
+    @Test
+    public void selectTeam_PressBack_selectAnother() {
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.textView4), withText("Brighton"),
+
+                        isDisplayed()));
+        textView.check(matches(isDisplayed()));
+
+        DataInteraction linearLayout = onData(anything())
+                .inAdapterView(allOf(withId(R.id.listview),
+                        childAtPosition(
+                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                2)))
+                .atPosition(2);
+        linearLayout.perform(click());
+
+        ViewInteraction textView2 = onView(
+                allOf(withId(R.id.txtItem), withText("Team Name: Brighton\nHome Kit: White/Blue\nAway Kit: Green\nThird Kit: Yellow\nClub Value: £ 178000000\nPremier League's won: 0\nChampions League's won:0\nFa Cup Titles: 0\nEuropa League's won: 0\nLeague cups won: 0\n"),
+
+                        isDisplayed()));
+        textView2.check(matches(isDisplayed()));
+
+
+
+
+      pressBack();
+
+
+
+        ViewInteraction textView4 = onView(
+                allOf(withId(R.id.textView4), withText("Bournemouth"),
+
+                        isDisplayed()));
+        textView.check(matches(isDisplayed()));
+
+        DataInteraction linearLayout1 = onData(anything())
+                .inAdapterView(allOf(withId(R.id.listview),
+                        childAtPosition(
+                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                2)))
+                .atPosition(1);
+        linearLayout1.perform(click());
+    }
+
+
+
 
 
 

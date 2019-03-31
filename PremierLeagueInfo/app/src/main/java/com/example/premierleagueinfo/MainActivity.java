@@ -1,5 +1,6 @@
 package com.example.premierleagueinfo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +25,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.*;
 
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -38,19 +42,38 @@ public class MainActivity extends AppCompatActivity {
     private EditText searchBar;
     private  CustomListAdapter myAdaptor;
     private  CustomListAdapter myAdaptor2;
-    private ArrayList<Integer> images2;
+    private ArrayList<Integer> crests2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //This hides the keyboard from the user when the this page is opened
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         setContentView(R.layout.activity_main);
         searchBar = findViewById(R.id.editText);
 
         Resources res = getResources();
+        //creates an List of string gathered from the resource folder
        final ArrayList<String> teams = new ArrayList<>(Arrays.asList(res.getStringArray(R.array.Teams)));
 
 
-      final   ArrayList<Integer> images = new ArrayList<Integer>() {
+
+       //Hides the keyboard when the user selects the enter/done button
+        searchBar.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(searchBar.getWindowToken(), 0);
+                }
+                return false;
+            }
+        });
+
+
+
+        //creates a list of all the teams crests
+      final   ArrayList<Integer> Crests = new ArrayList<Integer>() {
             {
                 add(R.drawable.arsenal);
                 add(R.drawable.bournmath);
@@ -77,22 +100,28 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listview);
 
-        myAdaptor = new CustomListAdapter(this, images, teams);
+        myAdaptor = new CustomListAdapter(this, Crests, teams);
 
         listView.setAdapter(myAdaptor);
 
+        //listens for when text is added to the search box
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                listView.setAdapter(myAdaptor);
+                //must be here to use TextWatcher
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //looks at the characters coming from the text box
+                //get the list of all teams that matches along with the crests that
+                //correspond to the team and sets it as a new adaptor
+
                 ArrayList<String> temp = new ArrayList<String>();
                 ArrayList<Integer> tempImages = new ArrayList<Integer>();
                 int textlength = searchBar.getText().length();
                 temp.clear();
+                tempImages.clear();
                 for (int i = 0; i < teams.size(); i++) {
                     if (textlength <= teams.get(i).length()) {
                         if (searchBar.getText().toString().equalsIgnoreCase(
@@ -100,12 +129,12 @@ public class MainActivity extends AppCompatActivity {
                                         teams.get(i).subSequence(0,
                                                 textlength))) {
                             temp.add(teams.get(i));
-                            tempImages.add(images.get(i));
+                            tempImages.add(Crests.get(i));
                         }
                     }
                 }
                 myAdaptor2=new CustomListAdapter(MainActivity.this, tempImages,temp);
-                images2=tempImages;
+                crests2=tempImages;
                 listView.setAdapter(myAdaptor2);
 
 
@@ -113,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //must be here to use TextWatcher
             }
         });
 
@@ -130,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Bundle bundle = new Bundle();
 
-                    bundle.putInt("imageValue", images2.get(position));
+                    bundle.putInt("imageValue", crests2.get(position));
 
                     myIntent.putExtras(bundle);
 
@@ -149,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Bundle bundle = new Bundle();
 
-                    bundle.putInt("imageValue", images.get(position));
+                    bundle.putInt("imageValue", Crests.get(position));
 
                     myIntent.putExtras(bundle);
 
@@ -159,9 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(myIntent);
                 }
 
-                //premierLeagueCall(view, test);
 
-                //Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
             }
         });
 

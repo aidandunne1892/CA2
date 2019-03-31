@@ -36,13 +36,13 @@ public class CustomListAdapter extends ArrayAdapter implements Filterable {
 
     }
 
-
+        //Sets the team and crest to the same row
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
         View rowView=inflater.inflate(R.layout.listview_row, null,true);
 
         TextView nameTextField = (TextView) rowView.findViewById(R.id.textView4);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView2);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.crest);
 
         nameTextField.setText(nameArray.get(position));
         imageView.setImageResource(imageIDarray.get(position));

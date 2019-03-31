@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
 
 
         textView = (TextView) findViewById(R.id.txtItem);
-        imageView = (ImageView) findViewById(R.id.image2);
+        imageView = (ImageView) findViewById(R.id.crest2);
 
         String temp = getIntent().getStringExtra("testValue");
 

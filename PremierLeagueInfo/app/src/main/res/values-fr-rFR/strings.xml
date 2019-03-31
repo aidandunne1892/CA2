@@ -4,14 +4,14 @@
     <!--For Text Above the Drop Down List-->
     <string name="Premier_League_Team">"Equipes de Premier League "</string>
 
-    <!--text for the send button-->
+    <string name="editBoxHint">équipe de recherche</string>
 
-    <!--text for the Header-->
+
     <string name="header_txt">"Premier League 2018/2019"</string>
 
     <string name="return_button_txt">Revenir</string>
 
-    <!--Text For the dropDown Menu-->
+
     <string-array name="Teams">
         <item>Arsenal </item>
         <item>Bournemouth</item>

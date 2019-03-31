@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtItem" />
 
     <ImageView
-        android:id="@+id/image2"
+        android:id="@+id/crest2"
         android:layout_width="92dp"
         android:layout_height="101dp"
         android:layout_marginStart="159dp"
