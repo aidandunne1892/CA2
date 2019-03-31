@@ -11903,11 +11903,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aidandunne/Desktop/test/ApplicationBackend/ApplicationBackend/ApplicationBackend.csproj",
+      "projectUniqueName": "/Users/aidandunne/Desktop/CA2/ApplicationBackend/ApplicationBackend/ApplicationBackend.csproj",
       "projectName": "ApplicationBackend",
-      "projectPath": "/Users/aidandunne/Desktop/test/ApplicationBackend/ApplicationBackend/ApplicationBackend.csproj",
+      "projectPath": "/Users/aidandunne/Desktop/CA2/ApplicationBackend/ApplicationBackend/ApplicationBackend.csproj",
       "packagesPath": "/Users/aidandunne/.nuget/packages/",
-      "outputPath": "/Users/aidandunne/Desktop/test/ApplicationBackend/ApplicationBackend/obj",
+      "outputPath": "/Users/aidandunne/Desktop/CA2/ApplicationBackend/ApplicationBackend/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
